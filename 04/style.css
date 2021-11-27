@@ -1,0 +1,49 @@
+&__body {
+  #{$table}__card, tr {
+  box-shadow: 0 1px 2px 0 rgba(43, 59, 93, 0.3);
+  
+  &:hover {
+  border-color: transparent;
+  box-shadow: 1px 3px 12px 0 rgba(0, 0, 0, 0.16);
+  #{$table}__icons-hidden {
+  li > div {
+  transform: translateY(0);
+  opacity: 1;
+  }
+  }
+  
+  #{$table}__icon-showed {
+  opacity: 0;
+  visibility: 0;
+  }
+  // Estilos para cuando en la tabla mis presentaciones tengamos opciones de firmar, compartir y seleccionar para enviar por lotes
+  // td:first-child {
+  // &::before {
+  // display: block;
+  // }
+  // }
+  }
+  &__icons-hidden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  
+  li {
+  > div {
+  transform: translateY(-20px);
+  transition: all 0.5s ease;
+  opacity: 0;
+  }
+  
+  &:nth-child(1) > div {
+  transition-delay: 125ms;
+  }
+  
+  &:nth-child(2) > div {
+  transition-delay: 0.2s;
+  }
+  }
+  }
