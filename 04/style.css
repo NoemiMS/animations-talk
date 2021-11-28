@@ -1,49 +1,87 @@
-&__body {
-  #{$table}__card, tr {
-  box-shadow: 0 1px 2px 0 rgba(43, 59, 93, 0.3);
-  
-  &:hover {
-  border-color: transparent;
-  box-shadow: 1px 3px 12px 0 rgba(0, 0, 0, 0.16);
-  #{$table}__icons-hidden {
-  li > div {
-  transform: translateY(0);
-  opacity: 1;
-  }
-  }
-  
-  #{$table}__icon-showed {
-  opacity: 0;
-  visibility: 0;
-  }
-  // Estilos para cuando en la tabla mis presentaciones tengamos opciones de firmar, compartir y seleccionar para enviar por lotes
-  // td:first-child {
-  // &::before {
-  // display: block;
-  // }
-  // }
-  }
-  &__icons-hidden {
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: lightblue;
+}
+
+main {
+  width: 600px;
+  margin: 250px auto;
+  background-color: lightgoldenrodyellow;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sr-only {
+  border: 0 !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.icon-wrapper {
+  position: relative;
+}
+
+.icon-list {
+  cursor: pointer;
+}
+
+.icons-hidden {
+  list-style: none;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   display: flex;
   justify-content: center;
-  
-  li {
-  > div {
-  transform: translateY(-20px);
-  transition: all 0.5s ease;
+}
+
+.icon-trigger {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.5s;
+}
+
+.icon-list:hover .icon-trigger {
   opacity: 0;
-  }
-  
-  &:nth-child(1) > div {
-  transition-delay: 125ms;
-  }
-  
-  &:nth-child(2) > div {
+}
+
+.icon-list .icons-hidden li > a {
+  margin-right: 15px;
+  transform: translateY(-50px);
+  transition: all 1s ease;
+  /*Ejemplo de si hacemos más lenta la animación de esto tenemos que ampliar el tiempo de la de arriba para que no "se pisen"*/
+  opacity: 0;
+  display: block;
+}
+
+.icon-list:hover .icons-hidden li > a {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.icon-list .icons-hidden li:nth-child(2) > a {
   transition-delay: 0.2s;
-  }
-  }
-  }
+}
+
+.icon-list .icons-hidden li:nth-child(3) > a {
+  transition-delay: 0.3s;
+}
+
+.icon-list .icons-hidden li:nth-child(4) > a {
+  transition-delay: 0.4s;
+}
+
+.icon {
+  width: 44px;
+}

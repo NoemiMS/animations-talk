@@ -1,5 +1,5 @@
 .trash {
-  background: #ff6873;
+  background: #30d5c8;
   width: 66px;
   height: 80px;
   display: inline-block;
@@ -28,7 +28,7 @@
 .trash span {
   position: absolute;
   height: 12px;
-  background: #ff6873;
+  background: #30d5c8;
   top: -19px;
   left: -10px;
   right: -10px;
@@ -45,7 +45,7 @@
   position: absolute;
   width: 27px;
   height: 7px;
-  background: #ff6873;
+  background: #30d5c8;
   top: -10px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -58,7 +58,6 @@
 
 .trash:hover span {
   transform: rotate(-45deg);
-  transition: transform 250ms;
 }
 
 /* https://codepen.io/parveenkaushik/pen/vNLMQK */
@@ -86,7 +85,7 @@ section {
   position: relative;
   width: 5px;
   height: 50px;
-  background: #fff;
+  background: #30a59b;
   display: block;
   margin: 14px auto;
   border-radius: 5px;
@@ -95,7 +94,7 @@ section {
   content: "";
   width: 5px;
   height: 50px;
-  background: #fff;
+  background: #30a59b;
   position: absolute;
   left: -18px;
   border-radius: 5px;
@@ -104,7 +103,7 @@ section {
   content: "";
   width: 5px;
   height: 50px;
-  background: #fff;
+  background: #30a59b;
   position: absolute;
   right: -18px;
   border-radius: 5px;
