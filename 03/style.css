@@ -1,56 +1,87 @@
-:root {
-  --alabaster: #fafafa;
-  --frangipani: #ffdcb5;
-  --frostee: #eaf7eb;
-  --lemon-chiffon: #f9eeab;
-  --sundown: #ffb7bc;
-  --white: #fff;
-}
-
-*,
-::after,
-::before {
-  box-sizing: border-box;
-  font-family: sans-serif;
-  margin: 0;
+* {
   padding: 0;
+  margin: 0;
 }
 
 body {
-  background-color: var(--alabaster);
-  min-height: 100vh;
-  width: 100%;
+  background-color: lightblue;
 }
 
-.card-container {
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
-  margin: 0 auto;
-  max-width: 100%;
-  padding: 2rem;
-  width: 55rem;
-}
-
-.card {
-  align-items: center;
-  border-radius: 0.25rem;
-  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.25);
+main {
+  width: 600px;
+  margin: 250px auto;
+  background-color: lightgoldenrodyellow;
+  padding: 40px;
   display: flex;
-  height: 23rem;
   justify-content: center;
+  align-items: center;
+}
+
+.sr-only {
+  border: 0 !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.icon-wrapper {
   position: relative;
-  width: 100%;
 }
 
-.ball {
-  background-color: var(--white);
-  border-radius: 50%;
-  height: 3rem;
+.icon-list {
+  cursor: pointer;
+}
+
+.icons-hidden {
+  list-style: none;
   position: absolute;
-  width: 3rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-/* Ball bouncing */
+.icon-trigger {
+  opacity: 1;
+  transition: opacity 0.4s ease 0.5s;
+}
 
-/* https://codepen.io/HenryZarza/pen/xxVyEpB */
+.icon-list:hover .icon-trigger {
+  opacity: 0;
+}
+
+.icon-list .icons-hidden li > a {
+  margin-right: 15px;
+  transform: translateY(-50px);
+  transition: all 1s ease;
+  /*Ejemplo de si hacemos más lenta la animación de esto tenemos que ampliar el tiempo de la de arriba para que no "se pisen"*/
+  opacity: 0;
+  display: block;
+}
+
+.icon-list:hover .icons-hidden li > a {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.icon-list .icons-hidden li:nth-child(2) > a {
+  transition-delay: 0.2s;
+}
+
+.icon-list .icons-hidden li:nth-child(3) > a {
+  transition-delay: 0.3s;
+}
+
+.icon-list .icons-hidden li:nth-child(4) > a {
+  transition-delay: 0.4s;
+}
+
+.icon {
+  width: 44px;
+}
