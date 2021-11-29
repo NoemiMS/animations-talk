@@ -1,0 +1,45 @@
+/* Animation infinita para arreglar */
+
+.flap {
+    animation: open 7s ease-in infinite;
+    z-index: 5;
+  }
+  .letter {
+    animation: letterUp 4s linear 1s infitine;
+    z-index: 1;
+  }
+  .heart {
+    animation: slideUp 7s ease-in-out 2s infinite,
+      sideSway 2s ease-in-out 1.2s infinite;
+  }
+  
+  @keyframes open {
+    0%,100% {
+      transform: rotateX(0deg);
+      z-index: 5;
+    }
+    20%, 90% {
+      transform: rotateX(180deg);
+      z-index: 1;
+    }
+  }
+  
+  @keyframes letterUp {
+    0% {
+      transform: translateY(0px);
+      z-index: 1;
+    }
+  
+    100% {
+      transform: translateY(-60px);
+      z-index: 2;
+    }
+  }
+  @keyframes sideSway {
+    0%, 100% {
+      margin-left: 0px;
+    }
+    50% {
+      margin-left: 50px;
+    }
+  }

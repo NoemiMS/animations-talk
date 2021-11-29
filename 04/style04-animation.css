@@ -1,47 +1,34 @@
-/* .envelope:hover .flap {
-  transform: rotateX(180deg);
-  transition: transform 0.4s ease, z-index 0.6s;
-  z-index: 1;
-}
 .flap {
-  transform: rotateX(0deg);
-  transition: transform 0.4s 0.6s ease, z-index 1s;
   z-index: 5;
+  transform: rotateX(0deg);
+  
 }
+
 .letter {
-  transform: rotateY(0deg);
-  transition: transform 0.4s ease, z-index 1s;
+  transform: translateY(0deg);
   z-index: 1;
-}
-.envelope:hover .letter {
-  transform: translateY(-60px);
-  transition: transform 0.4s 0.6s ease, z-index 0.6s;
-  z-index: 2;
 }
 
 .envelope:hover .heart {
   animation: slideUp 5s linear 1, sideSway 4s ease-in-out 2 alternate;
-} */
+}
 
 .a1 {
   left: 20%;
   transform: scale(0.6);
   opacity: 1;
-  animation-fill-mode: forwards;
   animation-delay: 0.7s;
 }
 .a2 {
   left: 45%;
   transform: scale(1);
   opacity: 1;
-  animation-fill-mode: forwards;
   animation-delay: 0.7s;
 }
 .a3 {
   left: 10%;
   transform: scale(0.8);
   opacity: 1;
-  animation-fill-mode: forwards;
   animation-delay: 0.7s;
 }
 
@@ -62,16 +49,37 @@
   }
 }
 
+
+
+
+
+/* Transición apertura de sobre y salida de carta */
+.flap {
+  transition: transform 0.4s 0.6s ease, z-index 1s;
+}
+.envelope:hover .flap {
+  transform: rotateX(180deg);
+  transition: transform 0.4s ease, z-index 0.6s;
+  z-index: 1;
+}
+
+.letter {
+  transition: transform 0.4s ease, z-index 1s;
+}
+.envelope:hover .letter {
+  transform: translateY(-60px);
+  transition: transform 0.4s 0.6s ease, z-index 0.6s;
+  z-index: 2;
+}
+
 /* Animation infinita para arreglar */
 
 /* .flap {
   animation: open 4s linear infinite;
-  transition: transform 0.4s 0.6s ease, z-index 1s;
   z-index: 5;
 }
 .letter {
   animation: letterUp 4s linear 1s infitine;
-  transition: transform 0.4s ease, z-index 1s;
   z-index: 1;
 }
 .heart {

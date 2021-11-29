@@ -14,7 +14,7 @@
 }
 
 .ball-bouncing .ball {
-  animation: ballBouncing 10s ease-in infinite;
+  animation: ballBouncing 1.2s ease-in infinite;
   /* animation: ballBouncing 1.2s cubic-bezier(0, 0.94, 0.89, 0.76) infinite; */
   bottom: 2.1rem;
   transform-origin: bottom;
