@@ -120,9 +120,31 @@
   margin-left: 0;
 }
 
+.a1 {
+  left: 20%;
+  transform: scale(0.6);
+  opacity: 1;
+  animation-delay: 0.7s;
+}
+.a2 {
+  left: 45%;
+  transform: scale(1);
+  opacity: 1;
+  animation-delay: 0.7s;
+}
+.a3 {
+  left: 10%;
+  transform: scale(0.8);
+  opacity: 1;
+  animation-delay: 0.7s;
+}
+
+
+
 body {
   background-color: #a8e2ff;
 }
 .envlope-wrapper {
   height: 380px;
 }
+
