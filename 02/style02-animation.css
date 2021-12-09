@@ -3,7 +3,7 @@
 }
 
 .ball-bouncing::before {
-  animation: shadowBouncing 10s ease-in infinite;
+  animation: shadowBouncing 1.2s ease-in infinite;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 1rem;
   bottom: 2rem;

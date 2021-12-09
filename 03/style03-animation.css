@@ -1,70 +1,40 @@
 .icon-trigger {
-    opacity: 1;
-    transition: opacity 0.4s ease 0.5s;
-  }
+  opacity: 1;
+  transition: opacity 0.4s ease 0.5s;
+}
   
-  .icon-list:hover .icon-trigger {
-    opacity: 0;
-  }
-  
-  .icon-list .icons-hidden li > a {
-    margin-right: 15px;
-    transform: translateY(-50px);
-    transition: all 1s ease;
-    opacity: 0;
-    display: block;
-  }
+.icon-list:hover .icon-trigger {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.icon-list .icons-hidden li > a {
+  margin-right: 15px;
+  transform: translateY(-50px);
+  transition: all 1s ease;
+  opacity: 0;
+  display: block;
+}
+
+.icon-list:hover .icons-hidden li > a {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.icon-list:hover .icons-hidden li:nth-child(2) > a{
+  transition-delay: 0.3s;
+}
+
+.icon-list:hover .icons-hidden li:nth-child(3) > a{
+  transition-delay: 0.5s;
+}
+
+.icon-list:hover .icons-hidden li:nth-child(4) > a{
+  transition-delay: 0.7s;
+}
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  /* .icon-list:hover .icons-hidden li > a {
-    transform: translateY(0);
-    opacity: 1;
-    transition-delay: 0.1s;
-  }
-  
-  .icon-list .icons-hidden li:nth-child(2) > a {
-    transition-delay: 0.2s;
-  }
-  
-  .icon-list .icons-hidden li:nth-child(3) > a {
-    transition-delay: 0.3s;
-  }
-  
-  .icon-list .icons-hidden li:nth-child(4) > a {
-    transition-delay: 0.4s;
-  } */
   
