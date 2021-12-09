@@ -1,3 +1,3 @@
 # animations-talk
 
-Live Demo
+[Live Demo](https://noemims.github.io/animations-talk/)
